@@ -8,6 +8,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chat, ChatConfigError } from './chatbot.js';
 import { Resend } from 'resend'
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -73,7 +74,7 @@ async function deliver({ name, email, message }) {
       to: process.env.CONTACT_TO,                // Your email (must match your Resend account email)
       reply_to: email,                           // The visitor's email, so you can reply to them
       subject: `Portfolio message from ${name}`,
-      text: message
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
     });
     if (error) {
       console.error('[contact] Resend API Error:', error);

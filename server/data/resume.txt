@@ -18,7 +18,7 @@ Experience:
   * Benchmarked a custom hybrid architecture against existing models through rigorous testing to ensure reliability and accurate multi-output estimation of moisture, fats, carbohydrates, and protein.
 - Intern, Colt Technology Services (Remote). June 2025 - July 2025.
   * Developed a Semantic Vector Search Engine using Streamlit, Google Cloud BigQuery, and Vertex AI, enabling search across datasets with 10K+ records.
-  * Engineered a robust highlighting mechanism leveraging BigQuery ML embeddings that improved search result relevance by 30% and enhanced user experience.
+  * Engineered a robust highlighting mechanism leveraging BigQuery ML embeddings that improved search result relevance and enhanced user experience.
   * Contributed to data-driven decision making by integrating PowerBI dashboards for analytics and reporting.
 
 Projects:
