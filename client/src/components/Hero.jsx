@@ -26,12 +26,12 @@ export default function Hero() {
         <div className="animate-pop flex justify-center">
           <span className="pill">
             <span className="h-2 w-2 rounded-full bg-lime-500" />
-            Portfolio 2026 · Thapar Institute
+            Portfolio 2026
           </span>
         </div>
 
         <h1 className="animate-pop mt-6 text-center text-5xl font-medium leading-[1.05] tracking-tight sm:text-7xl">
-          Hi I&apos;m {profile.firstName}
+          Hi, I&apos;m {profile.firstName}
           <span className="block font-display text-6xl font-normal italic sm:text-8xl">
             {profile.role}
           </span>
