@@ -1,0 +1,15 @@
+{
+  "name": "anishka-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio website: React + Tailwind CSS frontend, Node/Express backend with an AI chatbot",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "dev": "concurrently -n server,client -c green,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "NODE_ENV=production npm start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

@@ -1,0 +1,46 @@
+## Resume (source of truth; newer than the LinkedIn export)
+
+Name: Anishka Chawla
+Location: Ludhiana, Punjab, India
+Email: chawlanishka82@gmail.com, achawla1_be23@thapar.edu
+
+Professional profile:
+Computer Science and Engineering student with a strong foundation in software architecture, data structures, and algorithms. Proven track record of designing, testing, and deploying high-quality applications and driving end-to-end development.
+
+Education:
+- Thapar Institute of Engineering and Technology, Patiala, Punjab. B.E. in Computer Engineering, CGPA 8.12, expected 2027.
+- West Point School, Kotakapura, Punjab. CBSE-XII, 89%, 2023.
+- DAV Public School, Ludhiana, Punjab. CBSE-X, 94%, 2021.
+
+Experience:
+- Research Intern, CSIR - Central Scientific Instruments Organisation (CSIO), Chandigarh. June 2026 - July 2026.
+  * Designed and built deep learning-based regression models for hyperspectral millet nutrient prediction, leveraging analytics to evaluate reduced wavelength feature sets.
+  * Benchmarked a custom hybrid architecture against existing models through rigorous testing to ensure reliability and accurate multi-output estimation of moisture, fats, carbohydrates, and protein.
+- Intern, Colt Technology Services (Remote). June 2025 - July 2025.
+  * Developed a Semantic Vector Search Engine using Streamlit, Google Cloud BigQuery, and Vertex AI, enabling search across datasets with 10K+ records.
+  * Engineered a robust highlighting mechanism leveraging BigQuery ML embeddings that improved search result relevance by 30% and enhanced user experience.
+  * Contributed to data-driven decision making by integrating PowerBI dashboards for analytics and reporting.
+
+Projects:
+- Semantic ATS Resume Matching System (Python, FastAPI, React.js, Tailwind CSS, NLP)
+  * Built a Semantic ATS system to evaluate resume-job description fit using keyword matching, semantic similarity, and structural analysis, generating an explainable 0-100 ATS score with matched and missing skill insights.
+  * Developed the end-to-end application with FastAPI, React, sentence-transformers, and Gemini API, enabling resume/JD parsing, skill-gap analysis, and AI-generated feedback for resume optimization.
+- Autonomous Multi-Agent Developer Suite (CrewAI, Python, MCP, Docker, Gemini API, LLMs)
+  * Built an autonomous multi-agent system using CrewAI and LLMs, engineering role-based AI hierarchies (PM, Developer, QA) to automate requirement analysis and zero-intervention code synthesis.
+  * Integrated a containerized Docker sandbox with structured task-handoff protocols to securely compile, test, and iteratively debug AI-generated code within an isolated execution environment.
+- LinkedIn Personal Brand Builder (React.js, Node.js, MongoDB, Python, Gemini API, Firebase Auth)
+  * Developed an AI-powered web application that automatically scrapes 100+ industry news articles, performs intelligent article classification, and generates concise AI-based summaries using generative AI models to streamline professional content discovery.
+  * Integrated generative AI APIs to convert summarized news into polished, LinkedIn-ready post drafts, enabling automated personal branding in under 5 seconds per post.
+
+Technical skills:
+- Languages: Python, C, C++, HTML, CSS, JavaScript
+- Generative AI and Agentic AI: LangChain, RAG, CrewAI, OpenAI Agents SDK
+- Development Frameworks: React.js, Node.js, Next.js, Tailwind CSS
+- Cloud Platforms: Google Cloud Platform (GCP)
+- Tools and Software: Power BI, MongoDB, Visual Studio Code, GitHub
+- Core CS Concepts: Data Structures and Algorithms, OOPs, Operating Systems, SQL, Computer Networks
+
+Certifications:
+- AI Engineer Agentic Track: The Complete Agent and MCP Course
+
+Other (from LinkedIn): Content Coordinator (Dec 2024 - May 2025) and Executive Member (Jul 2024 - Dec 2024) at Microsoft Learn Student Chapter, TIET.

@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-[#f3f4f1] font-sans text-ink antialiased;
+}
+
+@layer components {
+  .section-label {
+    @apply mb-2 text-xs font-medium uppercase tracking-[0.2em] text-neutral-400;
+  }
+  .section-title {
+    @apply font-display text-4xl leading-tight sm:text-5xl;
+  }
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-black/5 bg-white/80 px-3 py-1.5 text-xs font-medium shadow-sm backdrop-blur;
+  }
+  .btn-dark {
+    @apply inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-neutral-800;
+  }
+  .btn-light {
+    @apply inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-medium transition hover:-translate-y-0.5 hover:border-black/30;
+  }
+  .glass {
+    @apply rounded-3xl border border-white/70 bg-white/70 shadow-[0_8px_40px_-12px_rgba(60,100,0,0.25)] backdrop-blur-xl;
+  }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .animate-marquee, .animate-floaty { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Chat scrollbar */
+.chat-scroll::-webkit-scrollbar { width: 6px; }
+.chat-scroll::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 9999px; }
