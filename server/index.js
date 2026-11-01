@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chat, ChatConfigError } from './chatbot.js';
+import { Resend } from 'resend'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -66,22 +67,23 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 async function deliver({ name, email, message }) {
-  // 1) Email through SMTP if configured
-  if (process.env.SMTP_HOST) {
-    const transport = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 587),
-      secure: Number(process.env.SMTP_PORT) === 465,
-      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-    });
-    await transport.sendMail({
-      from: process.env.SMTP_USER,
-      to: process.env.CONTACT_TO || process.env.SMTP_USER,
-      replyTo: email,
+  try {
+    const { data, error } = await resend.emails.send({
+      from: 'Portfolio <onboarding@resend.dev>', // Must use this exact address on the free tier
+      to: process.env.CONTACT_TO,                // Your email (must match your Resend account email)
+      reply_to: email,                           // The visitor's email, so you can reply to them
       subject: `Portfolio message from ${name}`,
-      text: `From: ${name} <${email}>\n\n${message}`,
+      text: message
     });
-    return;
+    if (error) {
+      console.error('[contact] Resend API Error:', error);
+      return false;
+    }
+    console.log('[contact] Email sent successfully:', data.id);
+    return true;
+  } catch (error) {
+    console.error('[contact] Unexpected error sending email:', error);
+    return false;
   }
   // 2) Otherwise store locally so nothing is lost
   const dir = path.join(__dirname, 'data');
