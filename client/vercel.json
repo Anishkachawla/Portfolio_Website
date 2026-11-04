@@ -1,1 +1,1 @@
-  { "rewrites": [{ "source": "/api/:path*", "destination": "https://anishkachawla.in/:match*" }] }
+  { "rewrites": [{ "source": "/api/:path*", "destination": "https://api.anishkachawla.in/api/:path*" }] }
