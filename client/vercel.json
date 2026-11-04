@@ -1,1 +1,1 @@
-  { "rewrites": [{ "source": "/api/:path*", "destination": "https://portfolio-website-s82p.onrender.com/api/:path*" }] }
+  { "rewrites": [{ "source": "/api/:path*", "destination": "https://anishkachawla.in/:match*" }] }
